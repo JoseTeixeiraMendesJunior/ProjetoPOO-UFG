@@ -11,6 +11,7 @@ public class Produto {
 	Produto (String nome, String categoria) {
 		this.nome = nome;
 		this.categoria = categoria;
+		this.estoque = 0;
 	}
 	
 	public void setValor (double val) {
@@ -37,9 +38,14 @@ public class Produto {
 		return this.estoque;
 	}
 	
+	public int getHistorico() {
+		return this.historico;
+	}
+	
 	public boolean Venda (int quantidade) {
 		if(this.estoque >= quantidade) {
 			this.estoque -= quantidade;
+			this.historico += quantidade;
 			return true;
 		}
 		return false;
