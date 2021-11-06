@@ -18,4 +18,12 @@ public class Cliente extends Pessoa {
 		this.valorgasto += valor;
 	}
 	
+	public String getCompras(){
+		return Integer.toString(this.compras);
+	}
+	
+	public String getValorGasto() {
+		return Double.toString(this.valorgasto);
+	}
+	
 }

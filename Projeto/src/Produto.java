@@ -5,7 +5,7 @@ public class Produto {
 	protected double custo;
 	protected double valor;
 	protected int estoque;
-	protected int historico; // tentar adiconar a mesma logica do contador.
+	protected int historico;
 	
 	
 	Produto (String nome, String categoria) {
@@ -42,6 +42,7 @@ public class Produto {
 		return this.historico;
 	}
 	
+	//checa a possibilidade de venda, se possivel realiza e registra o historico.
 	public boolean Venda (int quantidade) {
 		if(this.estoque >= quantidade) {
 			this.estoque -= quantidade;
